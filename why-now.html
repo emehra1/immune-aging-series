@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Why Immune Aging, Why Now</title>
+<meta name="description" content="The case for convening on immune aging in 2027 — written after ZEUS failed, and before HERMES and ARTEMIS report.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..800;1,6..96,400..600&family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Martian+Mono:wght@300;400;500&display=swap">
+<style>
+:root{
+  --ink:#0D1A2B;--ink-deep:#091422;--rule:#223B55;--rule-soft:#1A2E44;
+  --bone:#EDE6D8;--bone-2:#C3C4BE;--bone-3:#8B96A0;
+  --gold:#D9A441;--verdigris:#6FA8A0;--clay:#C4614E;
+  --display:"Bodoni Moda",Didot,"Times New Roman",serif;
+  --text:"Public Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  --label:"Martian Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  --rail:150px;--gap:44px;--pad:clamp(1.25rem,4.5vw,3.25rem);--maxw:1180px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--ink);color:var(--bone);font-family:var(--text);
+  font-size:17px;line-height:1.68;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(217,164,65,.38)}
+a:hover{border-bottom-color:var(--gold)}
+a:focus-visible{outline:1px solid var(--gold);outline-offset:4px}
+
+.sheet{width:100%;max-width:var(--maxw);margin:0 auto;padding-inline:var(--pad)}
+.row{display:grid;grid-template-columns:var(--rail) minmax(0,1fr);gap:var(--gap);align-items:start}
+@media(max-width:880px){.row{grid-template-columns:1fr;gap:1.1rem}}
+.col{max-width:64ch}
+
+.label{font-family:var(--label);font-weight:400;font-size:.63rem;line-height:1.5;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--bone-3);font-variant-numeric:tabular-nums}
+.label.gold{color:var(--gold)}
+.rail-label{padding-top:.7rem}
+@media(max-width:880px){.rail-label{padding-top:0}}
+
+header.top{position:sticky;top:0;z-index:50;background:rgba(13,26,43,.93);
+  backdrop-filter:blur(10px);border-bottom:1px solid var(--rule-soft)}
+.top-in{display:flex;align-items:center;justify-content:space-between;gap:1rem;height:58px}
+.brand{font-family:var(--display);font-weight:600;font-size:1.02rem;letter-spacing:-.01em;
+  color:var(--bone);border:0}
+.brand i{font-style:italic;font-weight:400;color:var(--gold)}
+.brand:hover{border:0}
+.back{border:0}
+.back:hover{border:0;color:var(--bone)}
+
+h1{font-family:var(--display);font-weight:500;font-size:clamp(2.5rem,6.4vw,4.6rem);line-height:.94;
+  letter-spacing:-.018em;text-wrap:balance;margin:0 0 1.5rem}
+h1 i{font-style:italic;font-weight:400;color:var(--gold)}
+h2{font-family:var(--display);font-weight:600;font-size:clamp(1.55rem,3.2vw,2.25rem);line-height:1.05;
+  letter-spacing:-.014em;text-wrap:balance;margin:0 0 1.05rem}
+p{margin:0 0 1.3em}
+.lede{font-family:var(--display);font-style:italic;font-weight:400;
+  font-size:clamp(1.18rem,2.4vw,1.62rem);line-height:1.34;letter-spacing:-.008em;color:var(--bone)}
+.dim{color:var(--bone-2)}
+
+.hero{padding:clamp(3rem,7vw,5rem) 0 2.6rem;border-bottom:1px solid var(--rule-soft)}
+article section{padding:clamp(2.6rem,5vw,4rem) 0;border-bottom:1px solid var(--rule-soft)}
+article section:last-of-type{border-bottom:0}
+
+.callout{border:1px solid var(--rule);border-left:2px solid var(--gold);background:var(--ink-deep);
+  padding:1.35rem 1.5rem;margin:2.2rem 0}
+.callout p{margin:0;font-size:.94rem;line-height:1.6;color:var(--bone-2)}
+.callout p+p{margin-top:.8rem}
+.callout strong{color:var(--bone);font-weight:600}
+
+.pull{border-left:2px solid var(--clay);padding:.1rem 0 .1rem 1.5rem;margin:2.4rem 0;
+  font-family:var(--display);font-style:italic;font-weight:400;
+  font-size:clamp(1.18rem,2.4vw,1.55rem);line-height:1.3;letter-spacing:-.012em;color:var(--bone)}
+
+.stat{font-family:var(--label);font-variant-numeric:tabular-nums;font-size:.88em;letter-spacing:.01em}
+
+.scroll{overflow-x:auto;border:1px solid var(--rule);margin:2rem 0}
+table.ledger{width:100%;border-collapse:collapse;font-size:.85rem;min-width:660px}
+.ledger th,.ledger td{text-align:left;padding:.72rem .85rem;border-bottom:1px solid var(--rule-soft);
+  border-right:1px solid var(--rule-soft);vertical-align:top}
+.ledger tr td:last-child,.ledger tr th:last-child{border-right:0}
+.ledger tbody tr:last-child td{border-bottom:0}
+.ledger thead th{background:var(--ink-deep);border-bottom:1px solid var(--rule)}
+.ledger td{color:var(--bone-2)}
+.ledger td:first-child{color:var(--bone);font-weight:600;font-family:var(--display);font-size:.98rem}
+.ledger td.hr{font-family:var(--label);font-variant-numeric:tabular-nums;white-space:nowrap;font-size:.76rem}
+.ledger tr.null td.hr{color:var(--clay)}
+
+.refs{margin-top:3.4rem;padding-top:1.8rem;border-top:1px solid var(--rule);
+  font-size:.8rem;line-height:1.6;color:var(--bone-3)}
+.refs ol{margin:0;padding-left:1.4rem}
+.refs li{margin-bottom:.6rem}
+sup a{font-family:var(--label);font-size:.58em;padding:0 .14em;border:0}
+
+footer{padding:2.6rem 0 4rem;border-top:1px solid var(--rule)}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="sheet top-in">
+    <a class="brand" href="index.html">Immune <i>Aging</i> Series</a>
+    <a class="back label" href="index.html">← The series</a>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="sheet">
+    <div class="row">
+      <p class="label gold rail-label">The case</p>
+      <div class="col">
+        <h1>Why immune aging,<br><i>why now</i></h1>
+        <p class="label" style="margin-bottom:2rem">Written September 2026 · Cambridge, Massachusetts</p>
+        <p class="lede">The field spent a decade building toward one clean test of its central claim. In July 2026 it got the answer, and the answer was no. That is exactly why this is worth three evenings.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<article>
+
+<section>
+  <div class="sheet"><div class="row">
+    <p class="label rail-label">§ 01</p>
+    <div class="col">
+      <h2>The thing that just happened</h2>
+      <p>For twenty years, the argument for treating inflammation as a driver of age-related disease rested on a single positive trial. CANTOS showed in 2017 that blocking one cytokine — interleukin-1β — reduced recurrent cardiovascular events in patients with residual inflammatory risk, without touching their cholesterol.<sup><a href="#r1">1</a></sup> It was the first prospective randomised proof that an inflammatory pathway causes a major age-related disease rather than merely marking it.</p>
+      <p class="dim">Everything downstream of that result — the biotech financings, the biomarker companies, the geroscience pitch decks — assumed CANTOS generalised. The obvious next move was to go one step down the pathway to interleukin-6, the cytokine that actually drives the hsCRP signal, with a cleaner drug and a better-selected population.</p>
+      <p class="dim">That trial was ZEUS. It enrolled 6,376 patients with atherosclerotic cardiovascular disease, chronic kidney disease, and hsCRP at or above 2 mg/L — the enrichment strategy the field had spent a decade validating. Ziltivekimab did precisely what it was designed to do: free IL-6 fell, hsCRP fell, target engagement was never in question.</p>
+      <p>On 31 July 2026, Novo Nordisk reported the primary endpoint. Hazard ratio <span class="stat">0.99</span>, 95% confidence interval <span class="stat">0.88–1.11</span>.<sup><a href="#r2">2</a></sup> Serious infections were higher on drug. All-cause mortality was unchanged. The stock fell about 8.5% that day.</p>
+      <p class="pull">The biomarker moved perfectly and the patients did not benefit. That dissociation — not target validation — is now the field's central problem.</p>
+    </div>
+  </div></div>
+</section>
+
+<section>
+  <div class="sheet"><div class="row">
+    <p class="label rail-label">§ 02</p>
+    <div class="col">
+      <h2>What it did and did not kill</h2>
+      <p class="dim">It is tempting to read ZEUS as the end of the inflammation hypothesis. It is not, and the reasons why are the substance of the first evening.</p>
+      <p class="dim">ZEUS enrolled an old population with badly compromised kidneys — mean age around 69, mean eGFR around 44, and 41% with existing heart failure. In patients like these, a large share of residual cardiovascular events comes from vascular calcification, arrhythmia and pump failure, none of which anti-inflammatory therapy would be expected to touch. A null result in that population is not the same as a null result in the biology.</p>
+      <p class="dim">There is also a structural question about where in the pathway to intervene. CANTOS blocked IL-1β, upstream, which also suppresses IL-18 and the rest of the inflammasome's output. ZEUS blocked IL-6, downstream, which suppresses the biomarker most cleanly but perhaps the least of the biology. Whether IL-6 is the causal node or merely the most legible readout of it is genuinely unresolved.</p>
+
+      <div class="callout">
+        <p><strong>The tell that the field has not given up:</strong> in September 2025 Novartis paid $1.4B for Tourmaline Bio and its anti-IL-6 antibody pacibekitug. A month after ZEUS failed, at ESC 2026, they presented sustained biomarker data and confirmed they are proceeding to Phase 3 anyway.<sup><a href="#r3">3</a></sup></p>
+        <p>Either they know something about differentiated dosing and population selection that ZEUS did not test, or they are about to spend a great deal of money learning the same lesson twice. That is a question worth putting to a room.</p>
+      </div>
+
+      <div class="scroll">
+        <table class="ledger">
+          <thead><tr><th class="label">Trial</th><th class="label">Intervention</th><th class="label">Population</th><th class="label">Result</th><th class="label">HR (95% CI)</th></tr></thead>
+          <tbody>
+            <tr><td>CANTOS</td><td>Canakinumab, anti–IL-1β</td><td>Post-MI, hsCRP ≥2</td><td>Positive</td><td class="hr">0.85 · 0.74–0.98</td></tr>
+            <tr><td>LoDoCo2</td><td>Colchicine 0.5 mg</td><td>Chronic coronary disease</td><td>Positive</td><td class="hr">0.69 · 0.57–0.83</td></tr>
+            <tr class="null"><td>CIRT</td><td>Low-dose methotrexate</td><td>ASCVD + metabolic disease</td><td>Null</td><td class="hr">0.96 · 0.79–1.16</td></tr>
+            <tr class="null"><td>ZEUS</td><td>Ziltivekimab, anti–IL-6</td><td>ASCVD + CKD + hsCRP ≥2</td><td>Null</td><td class="hr">0.99 · 0.88–1.11</td></tr>
+            <tr><td>HERMES</td><td>Ziltivekimab</td><td>HFpEF / HFmrEF</td><td>Reports H1 2027</td><td class="hr">—</td></tr>
+            <tr><td>ARTEMIS</td><td>Ziltivekimab</td><td>Post-acute MI</td><td>Reports H1 2027</td><td class="hr">—</td></tr>
+            <tr><td>TECTONIC</td><td>Canakinumab, anti–IL-1β</td><td><em>TET2</em>-CHIP carriers + CAD</td><td>Recruiting, MGH</td><td class="hr">—</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="dim">Note the last three rows. HERMES and ARTEMIS report in the first half of 2027 — during this series. And TECTONIC, recruiting at Mass General since March 2026, tests the sharpest surviving version of the hypothesis: that the patients who benefit from IL-1β blockade are specifically the ones carrying <em>TET2</em> clonal haematopoiesis, where the CANTOS subgroup showed a hazard ratio of 0.38.<sup><a href="#r4">4</a></sup></p>
+    </div>
+  </div></div>
+</section>
+
+<section>
+  <div class="sheet"><div class="row">
+    <p class="label rail-label">§ 03</p>
+    <div class="col">
+      <h2>The other half of the field is having a much better year</h2>
+      <p class="dim">While the inflammation programmes were failing, the reconstitution programmes were compounding. This is the asymmetry that makes a three-night structure necessary rather than decorative: suppressing inflammation and rebuilding immunity are different problems with different evidence bases, and 2026 pulled them apart.</p>
+      <p class="dim">In December 2025, Friedrich, Zhang and colleagues showed that transiently reprogramming the liver to secrete three trophic factors — DLL1, FLT3L and IL-7 — reignites thymopoiesis in aged mice, expands naïve T cells, and restores both vaccine and antitumour responses.<sup><a href="#r5">5</a></sup> The thymus, long treated as a vestigial organ that involutes and is written off, turns out to be reachable with an mRNA-lipid nanoparticle.</p>
+      <p class="dim">Human data had already begun undermining the vestigial framing. Patients who undergo thymectomy in adulthood carry elevated mortality, cancer and autoimmunity risk, correlated with reduced thymopoiesis and a pro-inflammatory cytokine profile.<sup><a href="#r6">6</a></sup> Removing the adult thymus is not free.</p>
+      <p class="dim">Capital followed. In July 2026 United Therapeutics acquired Thymmune — a Cambridge company building iPSC-derived thymic epithelial cells, previously funded by ARPA-H — for $140M cash plus up to $160M in milestones.<sup><a href="#r7">7</a></sup> In August, Tolerance Bio licensed a long-acting IL-7 for thymic indications in a deal reported at roughly $260M. In June, NewLimit closed $435M at about $3.1B on the strength of epigenetic reprogramming, and reports transcription-factor sets that restore youthful killing function to aged T cells.<sup><a href="#r8">8</a></sup></p>
+      <p class="pull">One half of the field just failed its biggest test. The other half just had its best year. Anyone claiming to know which way this resolves is guessing.</p>
+    </div>
+  </div></div>
+</section>
+
+<section>
+  <div class="sheet"><div class="row">
+    <p class="label rail-label">§ 04</p>
+    <div class="col">
+      <h2>And the measurement problem got worse, not better</h2>
+      <p class="dim">ZEUS raised the bar for what counts as evidence. If hsCRP can be crushed without a clinical benefit, then every aging biomarker with weaker credentials than hsCRP is now on notice — which is nearly all of them.</p>
+      <p class="dim">The honest accounting: hsCRP is the only fully registrational enrichment biomarker anyone has. Clonal haematopoiesis is a validated enrichment biomarker, increasingly accepted by reviewers. Everything else — GrimAge, DunedinPACE, iAge, IMM-AGE, organ and cell-type proteomic clocks, immune resilience scores — has strong prospective epidemiology and no regulatory qualification.</p>
+      <p class="dim">Two 2026 developments make this tractable rather than merely depressing. Furman, Herzog and colleagues published a framework in <em>Nature Medicine</em> for which immune-aging biomarkers can serve as surrogate endpoints, and found that multidimensional functional scores outperform single analytes.<sup><a href="#r9">9</a></sup> And in April the Allen Institute released its Human Immune Health Atlas — 71 immune cell subsets across more than a hundred donors, with a companion resource of over sixteen million cells from donors aged 25 to 90.<sup><a href="#r10">10</a></sup> The reference data now exist. What does not exist is agreement on which measurement would change a regulator's mind.</p>
+    </div>
+  </div></div>
+</section>
+
+<section>
+  <div class="sheet"><div class="row">
+    <p class="label rail-label">§ 05</p>
+    <div class="col">
+      <h2>Why a dinner, and why this one</h2>
+      <p class="dim">There is no shortage of conferences where people present finished work to a room that has stopped listening. The questions above are not settled enough for that format. They need the version of a scientist that appears after the talk, at the table, when the slide deck is closed.</p>
+      <p class="dim">So: seventy-five people, three Thursdays, in Cambridge. A keynote first, before dinner, so the room is primed on the right question rather than the speaker's favourite one. Lightning talks with a visible clock. A panel built on five questions that recur every night — modality, stratification, endpoints, biomarkers, trial design. Then dinner, with one of those questions printed on every table and someone at each table taking notes.</p>
+      <p class="dim">Talks are recorded and published. Everything from dinner onward is under the Chatham House rule, because the useful sentence — the one that begins “honestly, what we actually saw was” — does not get said on camera.</p>
+      <p>What comes out is a written playbook: five questions, three nights, and the field's best current answer to each, attributed to the argument rather than to any individual. If that document is any good, it is worth more than the dinners.</p>
+
+      <div class="callout">
+        <p><strong>Nights one and two run in April 2027.</strong> The third — on tools, biomarkers and trial design — is added once funding clears. If you would like it to happen, that is what partnership buys.</p>
+      </div>
+
+      <div class="refs">
+        <p class="label">References</p>
+        <ol>
+          <li id="r1">Ridker PM, <em>et al.</em> Antiinflammatory therapy with canakinumab for atherosclerotic disease. <em>N Engl J Med</em> 2017;377:1119–31. <a href="https://doi.org/10.1056/NEJMoa1707914">doi:10.1056/NEJMoa1707914</a></li>
+          <li id="r2">Novo Nordisk. Update on the ZEUS phase 3 trial in people with ASCVD, CKD and inflammation, 31 July 2026. Design and baseline characteristics: Ridker PM, <em>et al.</em> <em>JAMA Cardiol</em> 2026;11:89–97. <a href="https://doi.org/10.1001/jamacardio.2025.4491">doi:10.1001/jamacardio.2025.4491</a>. Full outcome data not yet published.</li>
+          <li id="r3">Novartis. Acquisition of Tourmaline Bio, completed 2025. Updated TRANQUILITY phase 2 data presented at ESC Congress 2026.</li>
+          <li id="r4">Svensson EC, <em>et al.</em> <em>TET2</em>-driven clonal hematopoiesis and response to canakinumab: an exploratory analysis of the CANTOS randomized clinical trial. <em>JAMA Cardiol</em> 2022. TECTONIC: <a href="https://clinicaltrials.gov/study/NCT06691217">NCT06691217</a>, Massachusetts General Hospital, recruiting.</li>
+          <li id="r5">Friedrich MJ, Pham J, Tian J, <em>et al.</em> Transient hepatic reconstitution of trophic factors enhances aged immunity. <em>Nature</em> 2025. <a href="https://doi.org/10.1038/s41586-025-09873-4">doi:10.1038/s41586-025-09873-4</a></li>
+          <li id="r6">Kooshesh KA, <em>et al.</em> Health consequences of thymus removal in adults. Scadden Laboratory, Mass General Brigham.</li>
+          <li id="r7">United Therapeutics. Acquisition of Thymmune Therapeutics, announced 2 July 2026.</li>
+          <li id="r8">NewLimit Series C, June 2026. Tolerance Bio / NeoImmuneTech licensing agreement for efineptakin alfa, August 2026. Company-reported preclinical data are not peer reviewed.</li>
+          <li id="r9">Furman D, Herzog CMS, <em>et al.</em> Immune aging biomarkers for clinical trials. <em>Nat Med</em> 2026;32:2368–82. <a href="https://doi.org/10.1038/s41591-026-04493-5">doi:10.1038/s41591-026-04493-5</a></li>
+          <li id="r10">Allen Institute for Immunology. Human Immune Health Atlas, released April 2026. Underlying cohort: Gong Q, <em>et al.</em> <em>Nature</em> 2025;648:696–706.</li>
+        </ol>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+</article>
+
+<footer>
+  <div class="sheet"><div class="row">
+    <p class="label rail-label">Colophon</p>
+    <p class="label">Immune Aging Series · Cambridge, Massachusetts · April 2027 · <a href="index.html">Back to the series</a></p>
+  </div></div>
+</footer>
+
+</body>
+</html>
