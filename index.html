@@ -10,31 +10,31 @@
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..800;1,6..96,400..600&family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Martian+Mono:wght@300;400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..900;1,9..144,400..700&family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Martian+Mono:wght@300;400;500&display=swap">
 <style>
 /* ══════════════════════════════════════════════════════════════════
    IMMUNE AGING SERIES 2027
    ------------------------------------------------------------------
-   Visual system: the engraved scientific plate. Prussian-blue ground,
-   bone ink, gold rules, clay used exactly once — for the result that
-   crossed the null. Didone display, grotesque text, wide mono labels.
-   No gradients, no blur, no rounded corners, no shadows: every mark
-   on this page is a line or a letter.
+   Visual system: the engraved scientific plate. Jet-black ground,
+   warm bone ink, gold rules, clay used exactly once — for the result
+   that crossed the null. Fraunces display, Public Sans text, Martian
+   Mono labels. No gradients, no blur, no rounded corners, no shadows:
+   every mark on this page is a line or a letter.
    ══════════════════════════════════════════════════════════════════ */
 :root{
-  --ink:#0D1A2B;
-  --ink-deep:#091422;
-  --plate:#112337;
-  --rule:#223B55;
-  --rule-soft:#1A2E44;
-  --bone:#EDE6D8;
-  --bone-2:#C3C4BE;
-  --bone-3:#8B96A0;
-  --gold:#D9A441;
-  --verdigris:#6FA8A0;
-  --clay:#C4614E;
+  --ink:#000000;
+  --ink-deep:#0A0A0A;
+  --plate:#101010;
+  --rule:#2E2C29;
+  --rule-soft:#1A1917;
+  --bone:#F2ECE0;
+  --bone-2:#C9C5BB;
+  --bone-3:#928D84;
+  --gold:#E0AC4C;
+  --verdigris:#79B3AA;
+  --clay:#D06B54;
 
-  --display:"Bodoni Moda",Didot,"Times New Roman",serif;
+  --display:"Fraunces",Georgia,"Times New Roman",serif;
   --text:"Public Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   --label:"Martian Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
 
@@ -51,7 +51,7 @@ body{
   -webkit-font-smoothing:antialiased;overflow-x:hidden;
 }
 img{max-width:100%}
-a{color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(217,164,65,.38)}
+a{color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(224,172,76,.42)}
 a:hover{border-bottom-color:var(--gold)}
 a:focus-visible,button:focus-visible{outline:1px solid var(--gold);outline-offset:4px}
 
@@ -62,8 +62,8 @@ a:focus-visible,button:focus-visible{outline:1px solid var(--gold);outline-offse
 
 /* ── labels, the mono voice ─────────────────────────────── */
 .label{
-  font-family:var(--label);font-weight:400;font-size:.63rem;line-height:1.5;
-  letter-spacing:.12em;text-transform:uppercase;color:var(--bone-3);
+  font-family:var(--label);font-weight:400;font-size:.68rem;line-height:1.5;
+  letter-spacing:.085em;text-transform:uppercase;color:var(--bone-3);
   font-variant-numeric:tabular-nums;
 }
 .label.gold{color:var(--gold)}
@@ -72,9 +72,9 @@ a:focus-visible,button:focus-visible{outline:1px solid var(--gold);outline-offse
 
 /* ── display type ───────────────────────────────────────── */
 h1,h2,h3{font-family:var(--display);font-weight:600;margin:0;text-wrap:balance;font-optical-sizing:auto}
-h1{font-size:clamp(3.4rem,11vw,7.6rem);line-height:.9;letter-spacing:-.018em;font-weight:500}
-h2{font-size:clamp(1.85rem,4.2vw,3.05rem);line-height:1.03;letter-spacing:-.014em}
-h3{font-size:clamp(1.18rem,2vw,1.42rem);line-height:1.18;letter-spacing:-.008em;font-weight:600}
+h1{font-size:clamp(3.2rem,10vw,6.9rem);line-height:.94;letter-spacing:-.026em;font-weight:600}
+h2{font-size:clamp(1.8rem,4vw,2.85rem);line-height:1.08;letter-spacing:-.022em;font-weight:600}
+h3{font-size:clamp(1.16rem,2vw,1.38rem);line-height:1.24;letter-spacing:-.014em;font-weight:600}
 p{margin:0 0 1.05em}
 .lead{font-size:clamp(1.06rem,1.7vw,1.22rem);line-height:1.55;color:var(--bone)}
 .dim{color:var(--bone-2)}
@@ -89,10 +89,10 @@ p{margin:0 0 1.05em}
 canvas#plate{position:absolute;inset:0;width:100%;height:100%;display:block}
 .platemark{
   position:absolute;inset:clamp(12px,2.2vw,26px);
-  border:1px solid rgba(237,230,216,.09);pointer-events:none;
+  border:1px solid rgba(242,236,224,.11);pointer-events:none;
 }
 .platemark::before,.platemark::after{
-  content:"";position:absolute;width:9px;height:9px;border:1px solid rgba(217,164,65,.34);
+  content:"";position:absolute;width:9px;height:9px;border:1px solid rgba(224,172,76,.42);
 }
 .platemark::before{top:-1px;left:-1px;border-right:0;border-bottom:0}
 .platemark::after{bottom:-1px;right:-1px;border-left:0;border-top:0}
@@ -101,19 +101,19 @@ main{position:relative;z-index:1}
 
 /* ── hero ───────────────────────────────────────────────── */
 .hero{min-height:100svh;display:flex;flex-direction:column;justify-content:center;padding:7rem 0 3rem}
-.hero h1{margin-bottom:1.6rem}
-.hero h1 i{font-style:italic;font-weight:400;color:var(--gold)}
+.hero h1{margin-bottom:1.7rem}
+.hero h1 i{font-style:italic;font-weight:500;color:var(--gold)}
 .hero .strap{display:flex;flex-wrap:wrap;gap:.45rem 1.5rem;margin:0 0 2rem}
 .hero .claim{
-  font-family:var(--display);font-weight:400;font-style:italic;
-  font-size:clamp(1.2rem,2.5vw,1.85rem);line-height:1.32;letter-spacing:-.008em;
+  font-family:var(--display);font-weight:500;font-style:italic;
+  font-size:clamp(1.18rem,2.4vw,1.7rem);line-height:1.38;letter-spacing:-.014em;
   color:var(--bone);max-width:24ch;margin:0 0 2.4rem;
 }
 .hero .claim b{font-style:normal;font-weight:600;color:var(--gold)}
 .acts{display:flex;flex-wrap:wrap;gap:.7rem}
 .btn{
   display:inline-block;font-family:var(--label);font-size:.68rem;font-weight:400;
-  letter-spacing:.14em;text-transform:uppercase;padding:.95rem 1.6rem;border:1px solid var(--gold);
+  letter-spacing:.1em;text-transform:uppercase;padding:.95rem 1.6rem;border:1px solid var(--gold);
   color:var(--gold);background:transparent;transition:background .2s,color .2s;
 }
 .btn:hover{background:var(--gold);color:var(--ink);border-bottom-color:var(--gold)}
@@ -126,7 +126,7 @@ main{position:relative;z-index:1}
 .body-plate{position:relative;background:var(--ink)}
 .body-plate::before{
   content:"";position:absolute;left:0;right:0;top:-120px;height:120px;
-  background:linear-gradient(to bottom,rgba(13,26,43,0),var(--ink));pointer-events:none;
+  background:linear-gradient(to bottom,rgba(0,0,0,0),var(--ink));pointer-events:none;
 }
 section{padding:clamp(3.6rem,7vw,6.2rem) 0;border-top:1px solid var(--rule-soft)}
 .sec-title{margin-bottom:1.1rem}
@@ -138,7 +138,7 @@ figure{margin:0;border:1px solid var(--rule);background:var(--ink-deep)}
 figure svg{display:block;min-width:580px;width:100%;height:auto}
 figcaption{padding:1rem clamp(1rem,3vw,2rem) 1.3rem;border-top:1px solid var(--rule-soft);
   font-size:.85rem;line-height:1.55;color:var(--bone-2)}
-figcaption b{font-family:var(--label);font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;
+figcaption b{font-family:var(--label);font-size:.66rem;letter-spacing:.09em;text-transform:uppercase;
   color:var(--gold);font-weight:400;display:block;margin-bottom:.45rem}
 .fp-name{font-family:var(--display);font-size:14px;font-weight:600}
 .fp-sub{font-family:var(--text);font-size:10.5px}
@@ -154,14 +154,14 @@ figcaption b{font-family:var(--label);font-size:.62rem;letter-spacing:.12em;text
 }
 @media(min-width:920px){.night{border-right:1px solid var(--rule)}}
 .night .roman{
-  font-family:var(--display);font-size:2.6rem;font-weight:400;font-style:italic;
+  font-family:var(--display);font-size:2.5rem;font-weight:600;font-style:italic;
   line-height:1;color:var(--gold);margin-bottom:.2rem;
 }
 .night.two .roman{color:var(--verdigris)}
 .night.three .roman{color:var(--bone-3)}
 .night h3{margin-bottom:.1rem}
-.night .ask{font-family:var(--display);font-style:italic;font-weight:400;font-size:1.02rem;
-  line-height:1.4;color:var(--bone-2)}
+.night .ask{font-family:var(--display);font-style:italic;font-weight:500;font-size:1rem;
+  line-height:1.45;color:var(--bone-2)}
 .night ul{margin:.3rem 0 0;padding:0;list-style:none}
 .night li{font-size:.855rem;line-height:1.45;color:var(--bone-3);padding:.32rem 0;
   border-top:1px solid var(--rule-soft)}
@@ -176,7 +176,7 @@ table.matrix{width:100%;border-collapse:collapse;font-size:.855rem;min-width:760
 .matrix tbody tr:last-child td,.matrix tbody tr:last-child th{border-bottom:0}
 .matrix thead th{border-bottom:1px solid var(--rule);background:var(--ink-deep)}
 .matrix tbody th{width:17%;min-width:132px;background:var(--ink-deep)}
-.matrix tbody th .q{font-family:var(--display);font-weight:600;font-size:1.02rem;
+.matrix tbody th .q{font-family:var(--display);font-weight:600;font-size:1rem;
   color:var(--bone);display:block;margin-top:.35rem;letter-spacing:-.008em}
 .matrix td{color:var(--bone-2);line-height:1.5}
 
@@ -277,51 +277,51 @@ footer li{margin-bottom:.28rem;font-size:.9rem;color:var(--bone-2)}
         <figure class="rv">
           <div class="fig-scroll">
             <svg viewBox="0 0 690 236" role="img" aria-label="Forest plot of four anti-inflammatory cardiovascular outcome trials. LoDoCo2 hazard ratio 0.69, interval 0.57 to 0.83. CANTOS 0.85, 0.74 to 0.98. CIRT 0.96, 0.79 to 1.16. ZEUS 0.99, 0.88 to 1.11. CIRT and ZEUS cross the null value of one.">
-              <line x1="497" y1="26" x2="497" y2="188" stroke="#223B55" stroke-width="1"/>
-              <text class="fp-tick" x="497" y="18" text-anchor="middle" fill="#8B96A0">NULL</text>
+              <line x1="497" y1="26" x2="497" y2="188" stroke="#2E2C29" stroke-width="1"/>
+              <text class="fp-tick" x="497" y="18" text-anchor="middle" fill="#928D84">NULL</text>
 
               <g>
-                <text class="fp-name" x="172" y="56" text-anchor="end" fill="#EDE6D8">LoDoCo2</text>
-                <text class="fp-sub" x="172" y="70" text-anchor="end" fill="#8B96A0">colchicine</text>
-                <line x1="197" y1="52" x2="398" y2="52" stroke="#6FA8A0" stroke-width="1"/>
-                <line x1="197" y1="46" x2="197" y2="58" stroke="#6FA8A0" stroke-width="1"/>
-                <line x1="398" y1="46" x2="398" y2="58" stroke="#6FA8A0" stroke-width="1"/>
-                <rect x="288" y="46" width="11" height="11" fill="#0D1A2B" stroke="#6FA8A0" stroke-width="1.4"/>
-                <text class="fp-val" x="662" y="56" text-anchor="end" fill="#C3C4BE">0.69 · 0.57–0.83</text>
+                <text class="fp-name" x="172" y="56" text-anchor="end" fill="#F2ECE0">LoDoCo2</text>
+                <text class="fp-sub" x="172" y="70" text-anchor="end" fill="#928D84">colchicine</text>
+                <line x1="197" y1="52" x2="398" y2="52" stroke="#79B3AA" stroke-width="1"/>
+                <line x1="197" y1="46" x2="197" y2="58" stroke="#79B3AA" stroke-width="1"/>
+                <line x1="398" y1="46" x2="398" y2="58" stroke="#79B3AA" stroke-width="1"/>
+                <rect x="288" y="46" width="11" height="11" fill="#000000" stroke="#79B3AA" stroke-width="1.4"/>
+                <text class="fp-val" x="662" y="56" text-anchor="end" fill="#C9C5BB">0.69 · 0.57–0.83</text>
               </g>
               <g>
-                <text class="fp-name" x="172" y="99" text-anchor="end" fill="#EDE6D8">CANTOS</text>
-                <text class="fp-sub" x="172" y="113" text-anchor="end" fill="#8B96A0">anti–IL-1β</text>
-                <line x1="336" y1="95" x2="486" y2="95" stroke="#6FA8A0" stroke-width="1"/>
-                <line x1="336" y1="89" x2="336" y2="101" stroke="#6FA8A0" stroke-width="1"/>
-                <line x1="486" y1="89" x2="486" y2="101" stroke="#6FA8A0" stroke-width="1"/>
-                <rect x="399" y="89" width="11" height="11" fill="#0D1A2B" stroke="#6FA8A0" stroke-width="1.4"/>
-                <text class="fp-val" x="662" y="99" text-anchor="end" fill="#C3C4BE">0.85 · 0.74–0.98</text>
+                <text class="fp-name" x="172" y="99" text-anchor="end" fill="#F2ECE0">CANTOS</text>
+                <text class="fp-sub" x="172" y="113" text-anchor="end" fill="#928D84">anti–IL-1β</text>
+                <line x1="336" y1="95" x2="486" y2="95" stroke="#79B3AA" stroke-width="1"/>
+                <line x1="336" y1="89" x2="336" y2="101" stroke="#79B3AA" stroke-width="1"/>
+                <line x1="486" y1="89" x2="486" y2="101" stroke="#79B3AA" stroke-width="1"/>
+                <rect x="399" y="89" width="11" height="11" fill="#000000" stroke="#79B3AA" stroke-width="1.4"/>
+                <text class="fp-val" x="662" y="99" text-anchor="end" fill="#C9C5BB">0.85 · 0.74–0.98</text>
               </g>
               <g>
-                <text class="fp-name" x="172" y="142" text-anchor="end" fill="#EDE6D8">CIRT</text>
-                <text class="fp-sub" x="172" y="156" text-anchor="end" fill="#8B96A0">methotrexate</text>
-                <line x1="371" y1="138" x2="576" y2="138" stroke="#5C6B7A" stroke-width="1"/>
-                <line x1="371" y1="132" x2="371" y2="144" stroke="#5C6B7A" stroke-width="1"/>
-                <line x1="576" y1="132" x2="576" y2="144" stroke="#5C6B7A" stroke-width="1"/>
-                <rect x="469" y="132" width="11" height="11" fill="#0D1A2B" stroke="#5C6B7A" stroke-width="1.4"/>
-                <text class="fp-val" x="662" y="142" text-anchor="end" fill="#8B96A0">0.96 · 0.79–1.16</text>
+                <text class="fp-name" x="172" y="142" text-anchor="end" fill="#F2ECE0">CIRT</text>
+                <text class="fp-sub" x="172" y="156" text-anchor="end" fill="#928D84">methotrexate</text>
+                <line x1="371" y1="138" x2="576" y2="138" stroke="#6A655E" stroke-width="1"/>
+                <line x1="371" y1="132" x2="371" y2="144" stroke="#6A655E" stroke-width="1"/>
+                <line x1="576" y1="132" x2="576" y2="144" stroke="#6A655E" stroke-width="1"/>
+                <rect x="469" y="132" width="11" height="11" fill="#000000" stroke="#6A655E" stroke-width="1.4"/>
+                <text class="fp-val" x="662" y="142" text-anchor="end" fill="#928D84">0.96 · 0.79–1.16</text>
               </g>
               <g>
-                <text class="fp-name" x="172" y="185" text-anchor="end" fill="#C4614E">ZEUS</text>
-                <text class="fp-sub" x="172" y="199" text-anchor="end" fill="#C3C4BE">anti–IL-6 · 2026</text>
-                <line x1="429" y1="181" x2="552" y2="181" stroke="#C4614E" stroke-width="1.5"/>
-                <line x1="429" y1="174" x2="429" y2="188" stroke="#C4614E" stroke-width="1.5"/>
-                <line x1="552" y1="174" x2="552" y2="188" stroke="#C4614E" stroke-width="1.5"/>
-                <rect x="485" y="175" width="12" height="12" fill="#C4614E"/>
-                <text class="fp-val" x="662" y="185" text-anchor="end" fill="#C4614E">0.99 · 0.88–1.11</text>
+                <text class="fp-name" x="172" y="185" text-anchor="end" fill="#D06B54">ZEUS</text>
+                <text class="fp-sub" x="172" y="199" text-anchor="end" fill="#C9C5BB">anti–IL-6 · 2026</text>
+                <line x1="429" y1="181" x2="552" y2="181" stroke="#D06B54" stroke-width="1.5"/>
+                <line x1="429" y1="174" x2="429" y2="188" stroke="#D06B54" stroke-width="1.5"/>
+                <line x1="552" y1="174" x2="552" y2="188" stroke="#D06B54" stroke-width="1.5"/>
+                <rect x="485" y="175" width="12" height="12" fill="#D06B54"/>
+                <text class="fp-val" x="662" y="185" text-anchor="end" fill="#D06B54">0.99 · 0.88–1.11</text>
               </g>
 
-              <line x1="182" y1="206" x2="640" y2="206" stroke="#1A2E44" stroke-width="1"/>
-              <text class="fp-tick" x="228" y="222" text-anchor="middle" fill="#8B96A0">0.6</text>
-              <text class="fp-tick" x="381" y="222" text-anchor="middle" fill="#8B96A0">0.8</text>
-              <text class="fp-tick" x="497" y="222" text-anchor="middle" fill="#8B96A0">1.0</text>
-              <text class="fp-tick" x="594" y="222" text-anchor="middle" fill="#8B96A0">1.2</text>
+              <line x1="182" y1="206" x2="640" y2="206" stroke="#1A1917" stroke-width="1"/>
+              <text class="fp-tick" x="228" y="222" text-anchor="middle" fill="#928D84">0.6</text>
+              <text class="fp-tick" x="381" y="222" text-anchor="middle" fill="#928D84">0.8</text>
+              <text class="fp-tick" x="497" y="222" text-anchor="middle" fill="#928D84">1.0</text>
+              <text class="fp-tick" x="594" y="222" text-anchor="middle" fill="#928D84">1.2</text>
             </svg>
           </div>
           <figcaption>
@@ -580,7 +580,7 @@ footer li{margin-bottom:.28rem;font-size:.9rem;color:var(--bone-2)}
       g.width = Math.floor((W + 260) * dpr); g.height = Math.floor((H + 260) * dpr);
       var gc = g.getContext("2d");
       gc.setTransform(dpr, 0, 0, dpr, 0, 0);
-      gc.strokeStyle = "rgba(237,230,216,0.052)";
+      gc.strokeStyle = "rgba(242,236,224,0.06)";
       gc.lineWidth = 0.75;
       var lines = Math.round(Math.min(150, Math.max(50, (W + 260) / 11)));
       for (var i = 0; i < lines; i++){
@@ -642,7 +642,7 @@ footer li{margin-bottom:.28rem;font-size:.9rem;color:var(--bone-2)}
           dx = a.x - b.x; dy = a.y - b.y; d2 = dx * dx + dy * dy;
           if (d2 < LINK2){
             var o = (1 - Math.sqrt(d2) / LINK) * 0.13 * Math.min(a.d, b.d);
-            ctx.strokeStyle = "rgba(237,230,216," + o.toFixed(3) + ")";
+            ctx.strokeStyle = "rgba(242,236,224," + o.toFixed(3) + ")";
             ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke();
           }
         }
@@ -653,18 +653,18 @@ footer li{margin-bottom:.28rem;font-size:.9rem;color:var(--bone-2)}
         a = clones[i];
         var rr = a.r * (a.e ? 1 + 0.055 * Math.sin(el / 2.4 + a.ph) : 1);
         if (a.e){
-          ctx.fillStyle = "rgba(217,164,65," + (0.16 * a.d).toFixed(3) + ")";
+          ctx.fillStyle = "rgba(224,172,76," + (0.17 * a.d).toFixed(3) + ")";
           ctx.beginPath(); ctx.arc(a.x, a.y, rr, 0, 6.2832); ctx.fill();
-          ctx.strokeStyle = "rgba(217,164,65," + (0.62 * a.d).toFixed(3) + ")";
+          ctx.strokeStyle = "rgba(224,172,76," + (0.66 * a.d).toFixed(3) + ")";
           ctx.lineWidth = 1;
         } else {
-          ctx.strokeStyle = "rgba(237,230,216," + (0.30 * a.d).toFixed(3) + ")";
+          ctx.strokeStyle = "rgba(242,236,224," + (0.32 * a.d).toFixed(3) + ")";
           ctx.lineWidth = 0.75;
         }
         ctx.beginPath(); ctx.arc(a.x, a.y, rr, 0, 6.2832); ctx.stroke();
 
         /* nucleus tick */
-        ctx.strokeStyle = a.e ? "rgba(217,164,65,.4)" : "rgba(237,230,216,.16)";
+        ctx.strokeStyle = a.e ? "rgba(224,172,76,.44)" : "rgba(242,236,224,.17)";
         ctx.lineWidth = 0.6;
         ctx.beginPath(); ctx.moveTo(a.x - 2.2, a.y); ctx.lineTo(a.x + 2.2, a.y); ctx.stroke();
 

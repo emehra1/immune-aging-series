@@ -21,6 +21,12 @@ A project of the [Harvard College Aging Initiative](https://aging-initiative.org
 Two static files, no build step and no dependencies. Fonts come from Google Fonts;
 everything else — including the animated hero — is inline.
 
+## Visual system
+
+The engraved scientific plate: jet-black ground, warm bone ink, gold rules, and clay
+used exactly once — on ZEUS, the result whose confidence interval crossed the null.
+Fraunces for display, Public Sans for text, Martian Mono for labels and numerals.
+
 ## The hero
 
 The canvas is a clonal architecture diagram, not decoration. Each ring is a T-cell clone,
