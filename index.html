@@ -10,15 +10,15 @@
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..900;1,9..144,400..700&family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Martian+Mono:wght@300;400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
 /* ══════════════════════════════════════════════════════════════════
    IMMUNE AGING SERIES 2027
    ------------------------------------------------------------------
    Visual system: the engraved scientific plate. Jet-black ground,
    warm bone ink, gold rules, clay used exactly once — for the result
-   that crossed the null. Fraunces display, Public Sans text, Martian
-   Mono labels. No gradients, no blur, no rounded corners, no shadows:
+   that crossed the null. Libre Franklin throughout — weight contrast
+   only, no decorative italics — with IBM Plex Mono for labels. No gradients, no blur, no rounded corners, no shadows:
    every mark on this page is a line or a letter.
    ══════════════════════════════════════════════════════════════════ */
 :root{
@@ -34,9 +34,9 @@
   --verdigris:#79B3AA;
   --clay:#D06B54;
 
-  --display:"Fraunces",Georgia,"Times New Roman",serif;
-  --text:"Public Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
-  --label:"Martian Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  --display:"Libre Franklin",-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;
+  --text:"Libre Franklin",-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;
+  --label:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
 
   --rail:150px;
   --gap:44px;
@@ -62,8 +62,8 @@ a:focus-visible,button:focus-visible{outline:1px solid var(--gold);outline-offse
 
 /* ── labels, the mono voice ─────────────────────────────── */
 .label{
-  font-family:var(--label);font-weight:400;font-size:.68rem;line-height:1.5;
-  letter-spacing:.085em;text-transform:uppercase;color:var(--bone-3);
+  font-family:var(--label);font-weight:400;font-size:.7rem;line-height:1.5;
+  letter-spacing:.13em;text-transform:uppercase;color:var(--bone-3);
   font-variant-numeric:tabular-nums;
 }
 .label.gold{color:var(--gold)}
@@ -71,10 +71,10 @@ a:focus-visible,button:focus-visible{outline:1px solid var(--gold);outline-offse
 @media(max-width:880px){.rail-label{padding-top:0}}
 
 /* ── display type ───────────────────────────────────────── */
-h1,h2,h3{font-family:var(--display);font-weight:600;margin:0;text-wrap:balance;font-optical-sizing:auto}
-h1{font-size:clamp(3.2rem,10vw,6.9rem);line-height:.94;letter-spacing:-.026em;font-weight:600}
-h2{font-size:clamp(1.8rem,4vw,2.85rem);line-height:1.08;letter-spacing:-.022em;font-weight:600}
-h3{font-size:clamp(1.16rem,2vw,1.38rem);line-height:1.24;letter-spacing:-.014em;font-weight:600}
+h1,h2,h3{font-family:var(--display);font-weight:700;margin:0;text-wrap:balance}
+h1{font-size:clamp(3rem,9.4vw,6.4rem);line-height:1;letter-spacing:-.038em;font-weight:800}
+h2{font-size:clamp(1.75rem,3.8vw,2.65rem);line-height:1.1;letter-spacing:-.03em;font-weight:700}
+h3{font-size:clamp(1.12rem,1.9vw,1.3rem);line-height:1.28;letter-spacing:-.018em;font-weight:600}
 p{margin:0 0 1.05em}
 .lead{font-size:clamp(1.06rem,1.7vw,1.22rem);line-height:1.55;color:var(--bone)}
 .dim{color:var(--bone-2)}
@@ -102,12 +102,12 @@ main{position:relative;z-index:1}
 /* ── hero ───────────────────────────────────────────────── */
 .hero{min-height:100svh;display:flex;flex-direction:column;justify-content:center;padding:7rem 0 3rem}
 .hero h1{margin-bottom:1.7rem}
-.hero h1 i{font-style:italic;font-weight:500;color:var(--gold)}
+.hero h1 i{font-style:normal;font-weight:300;color:var(--gold)}
 .hero .strap{display:flex;flex-wrap:wrap;gap:.45rem 1.5rem;margin:0 0 2rem}
 .hero .claim{
-  font-family:var(--display);font-weight:500;font-style:italic;
-  font-size:clamp(1.18rem,2.4vw,1.7rem);line-height:1.38;letter-spacing:-.014em;
-  color:var(--bone);max-width:24ch;margin:0 0 2.4rem;
+  font-family:var(--display);font-weight:400;font-style:normal;
+  font-size:clamp(1.1rem,2.1vw,1.45rem);line-height:1.44;letter-spacing:-.016em;
+  color:var(--bone);max-width:30ch;margin:0 0 2.4rem;
 }
 .hero .claim b{font-style:normal;font-weight:600;color:var(--gold)}
 .acts{display:flex;flex-wrap:wrap;gap:.7rem}
@@ -138,9 +138,9 @@ figure{margin:0;border:1px solid var(--rule);background:var(--ink-deep)}
 figure svg{display:block;min-width:580px;width:100%;height:auto}
 figcaption{padding:1rem clamp(1rem,3vw,2rem) 1.3rem;border-top:1px solid var(--rule-soft);
   font-size:.85rem;line-height:1.55;color:var(--bone-2)}
-figcaption b{font-family:var(--label);font-size:.66rem;letter-spacing:.09em;text-transform:uppercase;
+figcaption b{font-family:var(--label);font-size:.66rem;letter-spacing:.13em;text-transform:uppercase;
   color:var(--gold);font-weight:400;display:block;margin-bottom:.45rem}
-.fp-name{font-family:var(--display);font-size:14px;font-weight:600}
+.fp-name{font-family:var(--display);font-size:13.5px;font-weight:600;letter-spacing:-.01em}
 .fp-sub{font-family:var(--text);font-size:10.5px}
 .fp-val{font-family:var(--label);font-size:10px;letter-spacing:.02em}
 .fp-tick{font-family:var(--label);font-size:9.5px;letter-spacing:.06em}
@@ -154,14 +154,14 @@ figcaption b{font-family:var(--label);font-size:.66rem;letter-spacing:.09em;text
 }
 @media(min-width:920px){.night{border-right:1px solid var(--rule)}}
 .night .roman{
-  font-family:var(--display);font-size:2.5rem;font-weight:600;font-style:italic;
-  line-height:1;color:var(--gold);margin-bottom:.2rem;
+  font-family:var(--label);font-size:1.5rem;font-weight:500;letter-spacing:.02em;
+  line-height:1;color:var(--gold);margin-bottom:.35rem;
 }
 .night.two .roman{color:var(--verdigris)}
 .night.three .roman{color:var(--bone-3)}
 .night h3{margin-bottom:.1rem}
-.night .ask{font-family:var(--display);font-style:italic;font-weight:500;font-size:1rem;
-  line-height:1.45;color:var(--bone-2)}
+.night .ask{font-family:var(--display);font-style:normal;font-weight:400;font-size:.97rem;
+  line-height:1.5;letter-spacing:-.01em;color:var(--bone-2)}
 .night ul{margin:.3rem 0 0;padding:0;list-style:none}
 .night li{font-size:.855rem;line-height:1.45;color:var(--bone-3);padding:.32rem 0;
   border-top:1px solid var(--rule-soft)}
@@ -176,7 +176,7 @@ table.matrix{width:100%;border-collapse:collapse;font-size:.855rem;min-width:760
 .matrix tbody tr:last-child td,.matrix tbody tr:last-child th{border-bottom:0}
 .matrix thead th{border-bottom:1px solid var(--rule);background:var(--ink-deep)}
 .matrix tbody th{width:17%;min-width:132px;background:var(--ink-deep)}
-.matrix tbody th .q{font-family:var(--display);font-weight:600;font-size:1rem;
+.matrix tbody th .q{font-family:var(--display);font-weight:600;font-size:.98rem;
   color:var(--bone);display:block;margin-top:.35rem;letter-spacing:-.008em}
 .matrix td{color:var(--bone-2);line-height:1.5}
 
@@ -194,15 +194,15 @@ table.matrix{width:100%;border-collapse:collapse;font-size:.855rem;min-width:760
 .facts{display:grid;border-top:1px solid var(--rule);border-left:1px solid var(--rule)}
 @media(min-width:700px){.facts{grid-template-columns:repeat(4,1fr)}}
 .fact{border-bottom:1px solid var(--rule);border-right:1px solid var(--rule);padding:1.3rem 1.25rem}
-.fact dd{margin:.55rem 0 0;font-family:var(--display);font-weight:600;font-size:1.24rem;
-  line-height:1.14;letter-spacing:-.01em}
+.fact dd{margin:.55rem 0 0;font-family:var(--display);font-weight:600;font-size:1.2rem;
+  line-height:1.18;letter-spacing:-.018em}
 .fact dd em{display:block;font-family:var(--text);font-style:normal;font-weight:400;
   font-size:.8rem;color:var(--bone-3);letter-spacing:0;margin-top:.45rem;line-height:1.5}
 
 /* ── partners ───────────────────────────────────────────── */
 .marks{display:flex;flex-wrap:wrap;gap:0;border-top:1px solid var(--rule);border-left:1px solid var(--rule);margin-bottom:2.2rem}
 .mark{padding:1rem 1.5rem;border-right:1px solid var(--rule);border-bottom:1px solid var(--rule);
-  font-family:var(--display);font-size:1.02rem;font-weight:600;letter-spacing:-.005em}
+  font-family:var(--display);font-size:1rem;font-weight:600;letter-spacing:-.012em}
 .tiers{display:grid;border-top:1px solid var(--rule);border-left:1px solid var(--rule)}
 @media(min-width:760px){.tiers{grid-template-columns:repeat(2,1fr)}}
 .tier{border-bottom:1px solid var(--rule);border-right:1px solid var(--rule);padding:1.4rem 1.4rem 1.5rem}

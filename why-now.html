@@ -7,15 +7,15 @@
 <meta name="description" content="The case for convening on immune aging in 2027 — written after ZEUS failed, and before HERMES and ARTEMIS report.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..900;1,9..144,400..700&family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Martian+Mono:wght@300;400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
 :root{
   --ink:#000000;--ink-deep:#0A0A0A;--rule:#2E2C29;--rule-soft:#1A1917;
   --bone:#F2ECE0;--bone-2:#C9C5BB;--bone-3:#928D84;
   --gold:#E0AC4C;--verdigris:#79B3AA;--clay:#D06B54;
-  --display:"Fraunces",Georgia,"Times New Roman",serif;
-  --text:"Public Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
-  --label:"Martian Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  --display:"Libre Franklin",-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;
+  --text:"Libre Franklin",-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;
+  --label:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
   --rail:150px;--gap:44px;--pad:clamp(1.25rem,4.5vw,3.25rem);--maxw:1180px;
 }
 *{box-sizing:border-box}
@@ -31,7 +31,7 @@ a:focus-visible{outline:1px solid var(--gold);outline-offset:4px}
 @media(max-width:880px){.row{grid-template-columns:1fr;gap:1.1rem}}
 .col{max-width:64ch}
 
-.label{font-family:var(--label);font-weight:400;font-size:.68rem;line-height:1.5;letter-spacing:.085em;
+.label{font-family:var(--label);font-weight:400;font-size:.7rem;line-height:1.5;letter-spacing:.13em;
   text-transform:uppercase;color:var(--bone-3);font-variant-numeric:tabular-nums}
 .label.gold{color:var(--gold)}
 .rail-label{padding-top:.7rem}
@@ -40,21 +40,21 @@ a:focus-visible{outline:1px solid var(--gold);outline-offset:4px}
 header.top{position:sticky;top:0;z-index:50;background:rgba(0,0,0,.94);
   backdrop-filter:blur(10px);border-bottom:1px solid var(--rule-soft)}
 .top-in{display:flex;align-items:center;justify-content:space-between;gap:1rem;height:58px}
-.brand{font-family:var(--display);font-weight:600;font-size:1.02rem;letter-spacing:-.01em;
+.brand{font-family:var(--display);font-weight:700;font-size:1rem;letter-spacing:-.022em;
   color:var(--bone);border:0}
-.brand i{font-style:italic;font-weight:500;color:var(--gold)}
+.brand i{font-style:normal;font-weight:300;color:var(--gold)}
 .brand:hover{border:0}
 .back{border:0}
 .back:hover{border:0;color:var(--bone)}
 
-h1{font-family:var(--display);font-weight:600;font-size:clamp(2.4rem,6vw,4.2rem);line-height:.98;
-  letter-spacing:-.026em;text-wrap:balance;margin:0 0 1.5rem}
-h1 i{font-style:italic;font-weight:500;color:var(--gold)}
-h2{font-family:var(--display);font-weight:600;font-size:clamp(1.5rem,3vw,2.1rem);line-height:1.1;
-  letter-spacing:-.022em;text-wrap:balance;margin:0 0 1.05rem}
+h1{font-family:var(--display);font-weight:800;font-size:clamp(2.3rem,5.6vw,3.9rem);line-height:1.02;
+  letter-spacing:-.038em;text-wrap:balance;margin:0 0 1.5rem}
+h1 i{font-style:normal;font-weight:300;color:var(--gold)}
+h2{font-family:var(--display);font-weight:700;font-size:clamp(1.45rem,2.9vw,2rem);line-height:1.14;
+  letter-spacing:-.03em;text-wrap:balance;margin:0 0 1.05rem}
 p{margin:0 0 1.3em}
-.lede{font-family:var(--display);font-style:italic;font-weight:500;
-  font-size:clamp(1.16rem,2.3vw,1.5rem);line-height:1.4;letter-spacing:-.014em;color:var(--bone)}
+.lede{font-family:var(--display);font-style:normal;font-weight:400;
+  font-size:clamp(1.1rem,2.1vw,1.38rem);line-height:1.48;letter-spacing:-.016em;color:var(--bone)}
 .dim{color:var(--bone-2)}
 
 .hero{padding:clamp(3rem,7vw,5rem) 0 2.6rem;border-bottom:1px solid var(--rule-soft)}
@@ -68,8 +68,8 @@ article section:last-of-type{border-bottom:0}
 .callout strong{color:var(--bone);font-weight:600}
 
 .pull{border-left:2px solid var(--clay);padding:.1rem 0 .1rem 1.5rem;margin:2.4rem 0;
-  font-family:var(--display);font-style:italic;font-weight:500;
-  font-size:clamp(1.16rem,2.3vw,1.45rem);line-height:1.36;letter-spacing:-.018em;color:var(--bone)}
+  font-family:var(--display);font-style:normal;font-weight:500;
+  font-size:clamp(1.1rem,2.1vw,1.34rem);line-height:1.45;letter-spacing:-.02em;color:var(--bone)}
 
 .stat{font-family:var(--label);font-variant-numeric:tabular-nums;font-size:.88em;letter-spacing:.01em}
 
@@ -81,7 +81,7 @@ table.ledger{width:100%;border-collapse:collapse;font-size:.85rem;min-width:660p
 .ledger tbody tr:last-child td{border-bottom:0}
 .ledger thead th{background:var(--ink-deep);border-bottom:1px solid var(--rule)}
 .ledger td{color:var(--bone-2)}
-.ledger td:first-child{color:var(--bone);font-weight:600;font-family:var(--display);font-size:.98rem}
+.ledger td:first-child{color:var(--bone);font-weight:600;font-family:var(--display);font-size:.95rem;letter-spacing:-.012em}
 .ledger td.hr{font-family:var(--label);font-variant-numeric:tabular-nums;white-space:nowrap;font-size:.76rem}
 .ledger tr.null td.hr{color:var(--clay)}
 

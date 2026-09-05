@@ -25,7 +25,9 @@ everything else — including the animated hero — is inline.
 
 The engraved scientific plate: jet-black ground, warm bone ink, gold rules, and clay
 used exactly once — on ZEUS, the result whose confidence interval crossed the null.
-Fraunces for display, Public Sans for text, Martian Mono for labels and numerals.
+Libre Franklin throughout — weight contrast rather than decorative italics — with
+IBM Plex Mono for labels, numerals and the plate numbers. The layout carries the
+character; the type stays quiet.
 
 ## The hero
 
