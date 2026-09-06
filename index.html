@@ -134,8 +134,18 @@ section{padding:clamp(3.6rem,7vw,6.2rem) 0;border-top:1px solid var(--rule-soft)
 
 /* ── figure ─────────────────────────────────────────────── */
 figure{margin:0;border:1px solid var(--rule);background:var(--ink-deep)}
-.fig-scroll{overflow-x:auto;padding:1.6rem clamp(1rem,3vw,2rem) .4rem}
-figure svg{display:block;min-width:640px;width:100%;height:auto}
+.fig-scroll{padding:1.6rem clamp(1rem,3vw,2rem) .4rem}
+figure svg{display:block;width:100%;height:auto}
+.fig-narrow{display:none}
+.fp-nname{font-family:var(--display);font-size:12.5px;font-weight:600;letter-spacing:-.01em}
+.fp-nsub{font-family:var(--text);font-size:9.5px}
+.fp-nval{font-family:var(--label);font-size:9.5px;letter-spacing:.02em}
+.fp-ntick{font-family:var(--label);font-size:9px;letter-spacing:.06em}
+@media(max-width:759px){
+  .fig-wide{display:none}
+  .fig-narrow{display:block}
+  .fig-scroll{padding:1.1rem .9rem .3rem}
+}
 figcaption{padding:1rem clamp(1rem,3vw,2rem) 1.3rem;border-top:1px solid var(--rule-soft);
   font-size:.85rem;line-height:1.55;color:var(--bone-2)}
 figcaption b{font-family:var(--label);font-size:.66rem;letter-spacing:.13em;text-transform:uppercase;
@@ -179,6 +189,20 @@ table.matrix{width:100%;border-collapse:collapse;font-size:.855rem;min-width:760
 .matrix tbody th .q{font-family:var(--display);font-weight:600;font-size:.98rem;
   color:var(--bone);display:block;margin-top:.35rem;letter-spacing:-.008em}
 .matrix td{color:var(--bone-2);line-height:1.5}
+
+@media(max-width:700px){
+  .tbl-scroll{overflow-x:visible;border:0}
+  .matrix{min-width:0;display:block;font-size:.9rem}
+  .matrix thead{display:none}
+  .matrix tbody,.matrix tr,.matrix th,.matrix td{display:block;width:auto}
+  .matrix tbody tr{border:1px solid var(--rule);margin-bottom:-1px}
+  .matrix tbody th{width:auto;border:0;border-bottom:1px solid var(--rule);padding:.85rem 1rem}
+  .matrix tbody th .q{margin-top:.3rem}
+  .matrix td{border:0;border-bottom:1px solid var(--rule-soft);padding:.8rem 1rem .9rem}
+  .matrix tbody tr td:last-child{border-bottom:0}
+  .matrix td::before{content:attr(data-night);display:block;font-family:var(--label);
+    font-size:.6rem;letter-spacing:.13em;text-transform:uppercase;color:var(--gold);margin-bottom:.4rem}
+}
 
 /* ── run of show ────────────────────────────────────────── */
 .ros{border-top:1px solid var(--rule)}
@@ -276,52 +300,97 @@ footer li{margin-bottom:.28rem;font-size:.9rem;color:var(--bone-2)}
 
         <figure class="rv">
           <div class="fig-scroll">
-            <svg viewBox="0 0 760 236" role="img" aria-label="Forest plot of four anti-inflammatory cardiovascular outcome trials. LoDoCo2 hazard ratio 0.69, interval 0.57 to 0.83. CANTOS 0.85, 0.74 to 0.98. CIRT 0.96, 0.79 to 1.16. ZEUS 0.99, 0.88 to 1.11. CIRT and ZEUS cross the null value of one.">
-              <line x1="441" y1="26" x2="441" y2="196" stroke="#2E2C29" stroke-width="1"/>
-              <text class="fp-tick" x="441" y="18" text-anchor="middle" fill="#928D84">NULL</text>
-
+            <svg class="fig-wide" viewBox="0 0 760 236" role="img" aria-label="Forest plot of four anti-inflammatory cardiovascular outcome trials. LoDoCo2 hazard ratio 0.69, interval 0.57 to 0.83. CANTOS 0.85, 0.74 to 0.98. CIRT 0.96, 0.79 to 1.16. ZEUS 0.99, 0.88 to 1.11. CIRT and ZEUS cross the null value of one.">
+              <line x1="516.2" y1="26" x2="516.2" y2="196" stroke="#2E2C29" stroke-width="1"/>
+              <text class="fp-tick" x="516.2" y="18" text-anchor="middle" fill="#928D84">NULL</text>
               <g>
                 <text class="fp-name" x="150" y="56" text-anchor="end" fill="#F2ECE0">LoDoCo2</text>
                 <text class="fp-sub" x="150" y="70" text-anchor="end" fill="#928D84">colchicine</text>
-                <line x1="186.2" y1="52" x2="356.6" y2="52" stroke="#79B3AA" stroke-width="1"/>
-                <line x1="186.2" y1="46" x2="186.2" y2="58" stroke="#79B3AA" stroke-width="1"/>
-                <line x1="356.6" y1="46" x2="356.6" y2="58" stroke="#79B3AA" stroke-width="1"/>
-                <rect x="267.3" y="46.5" width="11" height="11" fill="#000000" stroke="#79B3AA" stroke-width="1.4"/>
+                <line x1="190.7" y1="52" x2="408.3" y2="52" stroke="#79B3AA" stroke-width="1"/>
+                <line x1="190.7" y1="46" x2="190.7" y2="58" stroke="#79B3AA" stroke-width="1"/>
+                <line x1="408.3" y1="46" x2="408.3" y2="58" stroke="#79B3AA" stroke-width="1"/>
+                <rect x="295.8" y="46.5" width="11" height="11" fill="#000000" stroke="#79B3AA" stroke-width="1.4"/>
                 <text class="fp-val" x="752" y="56" text-anchor="end" fill="#C9C5BB">0.69 &#183; 0.57&#8211;0.83</text>
               </g>
               <g>
                 <text class="fp-name" x="150" y="99" text-anchor="end" fill="#F2ECE0">CANTOS</text>
                 <text class="fp-sub" x="150" y="113" text-anchor="end" fill="#928D84">anti&#8211;IL-1&#946;</text>
-                <line x1="304.5" y1="95" x2="431.9" y2="95" stroke="#79B3AA" stroke-width="1"/>
-                <line x1="304.5" y1="89" x2="304.5" y2="101" stroke="#79B3AA" stroke-width="1"/>
-                <line x1="431.9" y1="89" x2="431.9" y2="101" stroke="#79B3AA" stroke-width="1"/>
-                <rect x="361.9" y="89.5" width="11" height="11" fill="#000000" stroke="#79B3AA" stroke-width="1.4"/>
+                <line x1="341.8" y1="95" x2="504.5" y2="95" stroke="#79B3AA" stroke-width="1"/>
+                <line x1="341.8" y1="89" x2="341.8" y2="101" stroke="#79B3AA" stroke-width="1"/>
+                <line x1="504.5" y1="89" x2="504.5" y2="101" stroke="#79B3AA" stroke-width="1"/>
+                <rect x="416.6" y="89.5" width="11" height="11" fill="#000000" stroke="#79B3AA" stroke-width="1.4"/>
                 <text class="fp-val" x="752" y="99" text-anchor="end" fill="#C9C5BB">0.85 &#183; 0.74&#8211;0.98</text>
               </g>
               <g>
                 <text class="fp-name" x="150" y="142" text-anchor="end" fill="#F2ECE0">CIRT</text>
                 <text class="fp-sub" x="150" y="156" text-anchor="end" fill="#928D84">methotrexate</text>
-                <line x1="334.2" y1="138" x2="508.3" y2="138" stroke="#6A655E" stroke-width="1"/>
-                <line x1="334.2" y1="132" x2="334.2" y2="144" stroke="#6A655E" stroke-width="1"/>
-                <line x1="508.3" y1="132" x2="508.3" y2="144" stroke="#6A655E" stroke-width="1"/>
-                <rect x="417" y="132.5" width="11" height="11" fill="#000000" stroke="#6A655E" stroke-width="1.4"/>
+                <line x1="379.7" y1="138" x2="602.1" y2="138" stroke="#6A655E" stroke-width="1"/>
+                <line x1="379.7" y1="132" x2="379.7" y2="144" stroke="#6A655E" stroke-width="1"/>
+                <line x1="602.1" y1="132" x2="602.1" y2="144" stroke="#6A655E" stroke-width="1"/>
+                <rect x="487" y="132.5" width="11" height="11" fill="#000000" stroke="#6A655E" stroke-width="1.4"/>
                 <text class="fp-val" x="752" y="142" text-anchor="end" fill="#928D84">0.96 &#183; 0.79&#8211;1.16</text>
               </g>
               <g>
                 <text class="fp-name" x="150" y="185" text-anchor="end" fill="#D06B54">ZEUS</text>
                 <text class="fp-sub" x="150" y="199" text-anchor="end" fill="#C9C5BB">anti&#8211;IL-6 &#183; 2026</text>
-                <line x1="383.1" y1="181" x2="488.4" y2="181" stroke="#D06B54" stroke-width="1.5"/>
-                <line x1="383.1" y1="174" x2="383.1" y2="188" stroke="#D06B54" stroke-width="1.5"/>
-                <line x1="488.4" y1="174" x2="488.4" y2="188" stroke="#D06B54" stroke-width="1.5"/>
-                <rect x="430.5" y="175" width="12" height="12" fill="#D06B54"/>
+                <line x1="442.2" y1="181" x2="576.6" y2="181" stroke="#D06B54" stroke-width="1.5"/>
+                <line x1="442.2" y1="174" x2="442.2" y2="188" stroke="#D06B54" stroke-width="1.5"/>
+                <line x1="576.6" y1="174" x2="576.6" y2="188" stroke="#D06B54" stroke-width="1.5"/>
+                <rect x="504.4" y="175" width="12" height="12" fill="#D06B54"/>
                 <text class="fp-val" x="752" y="185" text-anchor="end" fill="#D06B54">0.99 &#183; 0.88&#8211;1.11</text>
               </g>
-
-              <line x1="170" y1="212" x2="545" y2="212" stroke="#1A1917" stroke-width="1"/>
-              <text class="fp-tick" x="209.4" y="228" text-anchor="middle" fill="#928D84">0.6</text>
-              <text class="fp-tick" x="339.9" y="228" text-anchor="middle" fill="#928D84">0.8</text>
-              <text class="fp-tick" x="441" y="228" text-anchor="middle" fill="#928D84">1.0</text>
-              <text class="fp-tick" x="523.7" y="228" text-anchor="middle" fill="#928D84">1.2</text>
+              <line x1="170" y1="212" x2="640" y2="212" stroke="#1A1917" stroke-width="1"/>
+              <text class="fp-tick" x="220.4" y="228" text-anchor="middle" fill="#928D84">0.6</text>
+              <text class="fp-tick" x="387" y="228" text-anchor="middle" fill="#928D84">0.8</text>
+              <text class="fp-tick" x="516.2" y="228" text-anchor="middle" fill="#928D84">1.0</text>
+              <text class="fp-tick" x="621.7" y="228" text-anchor="middle" fill="#928D84">1.2</text>
+            </svg>
+            <svg class="fig-narrow" viewBox="0 0 360 322" role="img" aria-label="Forest plot of four anti-inflammatory cardiovascular outcome trials. LoDoCo2 hazard ratio 0.69, interval 0.57 to 0.83. CANTOS 0.85, 0.74 to 0.98. CIRT 0.96, 0.79 to 1.16. ZEUS 0.99, 0.88 to 1.11. CIRT and ZEUS cross the null value of one.">
+              <g>
+                <line x1="253.4" y1="42" x2="253.4" y2="66" stroke="#2E2C29" stroke-width="1"/>
+                <text class="fp-nname" x="6" y="21" fill="#F2ECE0">LoDoCo2</text>
+                <text class="fp-nsub" x="6" y="34" fill="#928D84">colchicine</text>
+                <text class="fp-nval" x="354" y="21" text-anchor="end" fill="#C9C5BB">0.69 &#183; 0.57&#8211;0.83</text>
+                <line x1="28.3" y1="54" x2="178.8" y2="54" stroke="#79B3AA" stroke-width="1"/>
+                <line x1="28.3" y1="48" x2="28.3" y2="60" stroke="#79B3AA" stroke-width="1"/>
+                <line x1="178.8" y1="48" x2="178.8" y2="60" stroke="#79B3AA" stroke-width="1"/>
+                <rect x="99.8" y="49" width="10" height="10" fill="#000000" stroke="#79B3AA" stroke-width="1.3"/>
+              </g>
+              <g>
+                <line x1="253.4" y1="112" x2="253.4" y2="136" stroke="#2E2C29" stroke-width="1"/>
+                <text class="fp-nname" x="6" y="91" fill="#F2ECE0">CANTOS</text>
+                <text class="fp-nsub" x="6" y="104" fill="#928D84">anti&#8211;IL-1&#946;</text>
+                <text class="fp-nval" x="354" y="91" text-anchor="end" fill="#C9C5BB">0.85 &#183; 0.74&#8211;0.98</text>
+                <line x1="132.8" y1="124" x2="245.3" y2="124" stroke="#79B3AA" stroke-width="1"/>
+                <line x1="132.8" y1="118" x2="132.8" y2="130" stroke="#79B3AA" stroke-width="1"/>
+                <line x1="245.3" y1="118" x2="245.3" y2="130" stroke="#79B3AA" stroke-width="1"/>
+                <rect x="183.3" y="119" width="10" height="10" fill="#000000" stroke="#79B3AA" stroke-width="1.3"/>
+              </g>
+              <g>
+                <line x1="253.4" y1="182" x2="253.4" y2="206" stroke="#2E2C29" stroke-width="1"/>
+                <text class="fp-nname" x="6" y="161" fill="#F2ECE0">CIRT</text>
+                <text class="fp-nsub" x="6" y="174" fill="#928D84">methotrexate</text>
+                <text class="fp-nval" x="354" y="161" text-anchor="end" fill="#928D84">0.96 &#183; 0.79&#8211;1.16</text>
+                <line x1="159.0" y1="194" x2="312.9" y2="194" stroke="#6A655E" stroke-width="1"/>
+                <line x1="159.0" y1="188" x2="159.0" y2="200" stroke="#6A655E" stroke-width="1"/>
+                <line x1="312.9" y1="188" x2="312.9" y2="200" stroke="#6A655E" stroke-width="1"/>
+                <rect x="232.1" y="189" width="10" height="10" fill="#000000" stroke="#6A655E" stroke-width="1.3"/>
+              </g>
+              <g>
+                <line x1="253.4" y1="252" x2="253.4" y2="276" stroke="#2E2C29" stroke-width="1"/>
+                <text class="fp-nname" x="6" y="231" fill="#D06B54">ZEUS</text>
+                <text class="fp-nsub" x="6" y="244" fill="#C9C5BB">anti&#8211;IL-6 &#183; 2026</text>
+                <text class="fp-nval" x="354" y="231" text-anchor="end" fill="#D06B54">0.99 &#183; 0.88&#8211;1.11</text>
+                <line x1="202.2" y1="264" x2="295.2" y2="264" stroke="#D06B54" stroke-width="1.5"/>
+                <line x1="202.2" y1="258" x2="202.2" y2="270" stroke="#D06B54" stroke-width="1.5"/>
+                <line x1="295.2" y1="258" x2="295.2" y2="270" stroke="#D06B54" stroke-width="1.5"/>
+                <rect x="244.4" y="259" width="10" height="10" fill="#D06B54"/>
+              </g>
+              <line x1="14" y1="294" x2="346" y2="294" stroke="#1A1917" stroke-width="1"/>
+              <text class="fp-ntick" x="48.8" y="308" text-anchor="middle" fill="#928D84">0.6</text>
+              <text class="fp-ntick" x="164.1" y="308" text-anchor="middle" fill="#928D84">0.8</text>
+              <text class="fp-ntick" x="253.4" y="308" text-anchor="middle" fill="#928D84">1.0</text>
+              <text class="fp-ntick" x="326.5" y="308" text-anchor="middle" fill="#928D84">1.2</text>
             </svg>
           </div>
           <figcaption>
@@ -413,33 +482,33 @@ footer li{margin-bottom:.28rem;font-size:.9rem;color:var(--bone-2)}
             <tbody>
               <tr>
                 <th scope="row"><span class="label">01</span><span class="q">Modality</span></th>
-                <td>Cytokine blockade, inflammasome, or clearance?</td>
-                <td>What can you actually give an 80-year-old, repeatedly?</td>
-                <td>What must a tool measure for that call to rest on evidence?</td>
+                <td data-night="I &#183; Inflammaging">Cytokine blockade, inflammasome, or clearance?</td>
+                <td data-night="II &#183; Rejuvenation">What can you actually give an 80-year-old, repeatedly?</td>
+                <td data-night="III &#183; Tools">What must a tool measure for that call to rest on evidence?</td>
               </tr>
               <tr>
                 <th scope="row"><span class="label">02</span><span class="q">Stratification</span></th>
-                <td>ZEUS enriched on hsCRP and still failed. Wrong marker, or wrong node?</td>
-                <td>Who has enough reserve left to rebuild?</td>
-                <td>Which stratifiers are registrational today?</td>
+                <td data-night="I &#183; Inflammaging">ZEUS enriched on hsCRP and still failed. Wrong marker, or wrong node?</td>
+                <td data-night="II &#183; Rejuvenation">Who has enough reserve left to rebuild?</td>
+                <td data-night="III &#183; Tools">Which stratifiers are registrational today?</td>
               </tr>
               <tr>
                 <th scope="row"><span class="label">03</span><span class="q">Endpoints</span></th>
-                <td>MACE takes 6,000 patients. What would a regulator take instead?</td>
-                <td>TRECs, repertoire, vaccine response — endpoints or measurements?</td>
-                <td>Where is the line between surrogate and signal?</td>
+                <td data-night="I &#183; Inflammaging">MACE takes 6,000 patients. What would a regulator take instead?</td>
+                <td data-night="II &#183; Rejuvenation">TRECs, repertoire, vaccine response — endpoints or measurements?</td>
+                <td data-night="III &#183; Tools">Where is the line between surrogate and signal?</td>
               </tr>
               <tr>
                 <th scope="row"><span class="label">04</span><span class="q">Biomarkers</span></th>
-                <td>What survives ZEUS as decision-grade?</td>
-                <td>Which markers track the intervention, not the disease?</td>
-                <td>What would it take to qualify a clock?</td>
+                <td data-night="I &#183; Inflammaging">What survives ZEUS as decision-grade?</td>
+                <td data-night="II &#183; Rejuvenation">Which markers track the intervention, not the disease?</td>
+                <td data-night="III &#183; Tools">What would it take to qualify a clock?</td>
               </tr>
               <tr>
                 <th scope="row"><span class="label">05</span><span class="q">Trial design</span></th>
-                <td>Is monotherapy in aging finished?</td>
-                <td>Which first indication de-risks a platform?</td>
-                <td>What is the minimum trial a partner would underwrite?</td>
+                <td data-night="I &#183; Inflammaging">Is monotherapy in aging finished?</td>
+                <td data-night="II &#183; Rejuvenation">Which first indication de-risks a platform?</td>
+                <td data-night="III &#183; Tools">What is the minimum trial a partner would underwrite?</td>
               </tr>
             </tbody>
           </table>
