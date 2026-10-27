@@ -1,6 +1,3 @@
 .DS_Store
 *.log
 node_modules/
-
-# GitHub Desktop created an empty local-only repo here; not part of the site
-immune-aging-series/
