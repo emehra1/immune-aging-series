@@ -16,8 +16,9 @@ A project of the [Harvard College Aging Initiative](https://aging-initiative.org
 
     index.html     landing page: the plate, the premise, the nights, the five questions, sources
     why-now.html   long-form case with references: what ZEUS changed and why this convenes now
+    CNAME          custom domain: immuneagingseries.org
 
-Two static files, no build step and no dependencies. Fonts come from Google Fonts;
+Two static pages, no build step and no dependencies. Fonts come from Google Fonts;
 everything else, including the animated hero, is inline.
 
 ## Visual system
@@ -47,5 +48,7 @@ Then open http://localhost:8000.
 ## Deploying
 
 Static hosting anywhere. For GitHub Pages: Settings → Pages → Deploy from branch → `main` / root.
-The site is served at https://eshanmehra.xyz/immune-aging-series/ through the custom domain
-already set on the user site, so this repo needs no `CNAME` file.
+The site is served at https://immuneagingseries.org. GitHub created the `CNAME` file (the bare
+hostname, one line) when the domain was saved under Settings → Pages; keep it at the repo root.
+DNS is at Porkbun: four A records on the apex pointing to GitHub Pages (185.199.108.153,
+185.199.109.153, 185.199.110.153, 185.199.111.153) and a `www` CNAME to `emehra1.github.io`.
